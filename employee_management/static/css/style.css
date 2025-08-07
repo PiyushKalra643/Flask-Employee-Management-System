@@ -1,0 +1,53 @@
+/*
+  This file contains custom styles to complement the Tailwind CSS classes.
+*/
+
+/* Basic body and container styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f7fafc; /* A slightly lighter background */
+}
+
+/* Enhancing the main container */
+.max-w-4xl {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* More pronounced shadow */
+}
+
+/* Custom button styles */
+.bg-blue-500 {
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.bg-blue-500:hover {
+    background-color: #3b82f6; /* A slightly darker blue on hover */
+}
+
+.bg-green-500 {
+    transition: background-color 0.3s ease;
+}
+
+.bg-green-500:hover {
+    background-color: #10b981; /* A slightly darker green on hover */
+}
+
+.bg-red-500 {
+    transition: background-color 0.3s ease;
+}
+
+.bg-red-500:hover {
+    background-color: #ef4444; /* A slightly darker red on hover */
+}
+
+/* Table-specific styles to add a bit more polish */
+.min-w-full {
+    border-collapse: collapse;
+}
+
+.min-w-full th,
+.min-w-full td {
+    border-bottom: 1px solid #e2e8f0; /* Light border between rows */
+}
+
+.min-w-full tbody tr:last-child td {
+    border-bottom: none; /* No border for the last row */
+}

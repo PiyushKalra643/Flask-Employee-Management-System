@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Employee</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold mb-6 text-gray-800">Add New Employee</h1>
+
+        <!-- Form to add an employee. It sends a POST request to the '/add' route. -->
+        <form method="POST" action="{{ url_for('add_employee') }}" class="space-y-4">
+            <div>
+                <label for="name" class="block text-gray-700 font-medium mb-1">Name:</label>
+                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="role" class="block text-gray-700 font-medium mb-1">Role:</label>
+                <input type="text" id="role" name="role" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="department" class="block text-gray-700 font-medium mb-1">Department:</label>
+                <input type="text" id="department" name="department" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex items-center space-x-4">
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors duration-200">
+                    Add Employee
+                </button>
+                <a href="{{ url_for('index') }}" class="text-gray-600 hover:underline">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
